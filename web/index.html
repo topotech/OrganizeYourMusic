@@ -1696,7 +1696,7 @@ function collectAudioAttributes(tracks) {
     return getSpotifyP("https://api.spotify.com/v1/audio-features",
         { ids: trackIds.join(',')})
         .then(function(results) {
-          alert('pirulais');
+          alert(results);
           _.each(results.audio_features, function(audio_feature) {
               if (audio_feature) {
                   var track = curTracks[audio_feature.id];

@@ -1697,6 +1697,7 @@ function collectAudioAttributes(tracks) {
         { ids: trackIds.join(',')})
         .then(function(results) {
           alert(results);
+          console.log('My object: ', results);
           _.each(results.audio_features, function(audio_feature) {
               if (audio_feature) {
                   var track = curTracks[audio_feature.id];
